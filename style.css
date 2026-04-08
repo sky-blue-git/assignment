@@ -122,12 +122,6 @@ home-page-web .frame-3 {
   position: relative;
 }
 
-.home-page-web .img-2 {
-  position: relative;
-  width: 16px;
-  height: 16px;
-}
-
 .home-page-web .text-wrapper {
   all: unset;
   box-sizing: border-box;
@@ -351,13 +345,6 @@ home-page-web .frame-3 {
   box-shadow: var(--shadow-sm);
 }
 
-.home-page-web .frame-14 {
-  position: relative;
-  width: 29.41px;
-  height: 20px;
-  margin-left: -2.71px;
-}
-
 .home-page-web .text-wrapper-2 {
   position: relative;
   width: fit-content;
@@ -373,22 +360,6 @@ home-page-web .frame-3 {
   font-style: var(--body-body-14-med-font-style);
 }
 
-.home-page-web .ISI-mark-black-wrapper {
-  position: relative;
-  width: 25.98px;
-  height: 20px;
-  margin-left: -1.49px;
-}
-
-.home-page-web .ISI-mark-black {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 22px;
-  height: 17px;
-  object-fit: cover;
-}
-
 .home-page-web .text-wrapper-3 {
   position: relative;
   width: fit-content;
@@ -402,13 +373,6 @@ home-page-web .frame-3 {
   line-height: var(--body-body-14-med-line-height);
   white-space: nowrap;
   font-style: var(--body-body-14-med-font-style);
-}
-
-.home-page-web .CE-certification {
-  position: relative;
-  width: 22.5px;
-  height: 20px;
-  object-fit: cover;
 }
 
 .home-page-web .text-wrapper-4 {
@@ -674,12 +638,6 @@ home-page-web .frame-3 {
   line-height: var(--body-body-14-reg-line-height);
   white-space: nowrap;
   font-style: var(--body-body-14-reg-font-style);
-}
-
-.home-page-web .caret-right {
-  position: relative;
-  width: 12px;
-  height: 12px;
 }
 
 .home-page-web .text-wrapper-9 {
