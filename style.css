@@ -955,11 +955,7 @@ home-page-web .frame-3 {
   box-shadow: var(--shadows-s2);
 }
 
-.home-page-web .img-3 {
-  position: relative;
-  width: 32px;
-  height: 32px;
-}
+
 
 .home-page-web .frame-27 {
   display: flex;
