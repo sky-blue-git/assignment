@@ -1,0 +1,30 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:var(--body-body-16-reg-font-weight),var(--body-body-16-sem-font-weight),var(--text-base-font-medium-font-weight),var(--label-l5regular-font-weight),var(--body-body-12-reg-font-weight),var(--body-body-20-sem-font-weight),var(--body-body-14-reg-font-weight),var(--body-body-14-med-font-weight),var(--body-body-12-sem-font-weight),400,var(--text-base-font-normal-font-weight),var(--body-body-16-med-font-weight),var(--paragraph-03-p3semibold-font-weight),var(--body-body-18-reg-font-weight)|Urbanist:var(--heading-h2-font-weight),var(--heading-h3-font-weight),var(--heading-h6-font-weight),400,600,var(--heading-h1-font-weight)"); /* @FONTWARNING[{"type": "restricted", "family": "Vert Grotesk Display-Bold", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Vert Grotesk Display-Bold";
+  src: local("Vert Grotesk Display-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Vert Grotesk Display", "weight": "var(--headings-h3-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Vert Grotesk Display";
+  src: local("Vert Grotesk Display");
+}
