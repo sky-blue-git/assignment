@@ -1,7 +1,9 @@
 .home-page-web {
   display: flex;
   flex-direction: column;
-  width: 1600px;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
   align-items: flex-start;
   position: relative;
   background-color: #ffffff;
@@ -66,12 +68,13 @@
   flex: 0 0 auto;
 }
 
-home-page-web .frame-3 {
-  display: inline-flex;
+.home-page-web .frame-3 {
+  display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 16px;
   position: relative;
-  flex: 0 0 auto;
+  align-self: stretch;
 }
 
 .home-page-web .button {
@@ -971,6 +974,7 @@ home-page-web .frame-3 {
 .home-page-web .frame-28 {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   align-self: stretch;
   width: 100%;
@@ -1504,7 +1508,6 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .component {
-  margin-left: -680px;
   display: flex;
   flex-direction: column;
   width: 420px;
@@ -1529,10 +1532,10 @@ home-page-web .frame-3 {
 
 .home-page-web .fishnet {
   position: absolute;
-  top: 2639px;
-  left: 7229px;
-  width: 910px;
-  height: 683px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1599,7 +1602,6 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .component-2 {
-  margin-left: -244px;
   display: flex;
   flex-direction: column;
   width: 420px;
@@ -1649,7 +1651,6 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .component-4 {
-  margin-right: -244px;
   display: flex;
   flex-direction: column;
   width: 420px;
@@ -1674,7 +1675,6 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .component-5 {
-  margin-right: -680px;
   display: flex;
   flex-direction: column;
   width: 420px;
@@ -1690,10 +1690,10 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .fishnet-4 {
-  top: 2639px;
-  left: 5049px;
-  width: 910px;
-  height: 683px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   position: absolute;
   object-fit: cover;
 }
@@ -1790,8 +1790,7 @@ home-page-web .frame-3 {
   gap: 8px;
   padding: 8px 16px;
   position: relative;
-  flex: 1;
-  flex-grow: 1;
+  flex: 0 0 auto;
   border-radius: 32px;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -1822,8 +1821,7 @@ home-page-web .frame-3 {
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  flex: 1;
-  flex-grow: 1;
+  flex: 0 0 auto;
   background-color: #ffffff;
   border-radius: 32px;
   overflow: hidden;
@@ -1959,6 +1957,8 @@ home-page-web .frame-3 {
   width: 50px;
   height: 50px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffffdb;
   border-radius: 50px;
   overflow: hidden;
@@ -1969,8 +1969,6 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .arrow-right-3 {
-  margin-top: 12.5px;
-  margin-left: 13px;
   width: 24px;
   height: 24px;
 }
@@ -1982,6 +1980,8 @@ home-page-web .frame-3 {
   width: 50px;
   height: 50px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffffdb;
   border-radius: 50px;
   overflow: hidden;
@@ -1993,8 +1993,6 @@ home-page-web .frame-3 {
 }
 
 .home-page-web .arrow-right-4 {
-  margin-top: 13.5px;
-  margin-left: 13px;
   transform: rotate(-180deg);
   width: 24px;
   height: 24px;
@@ -2066,8 +2064,6 @@ home-page-web .frame-3 {
   gap: 24px;
   position: relative;
   flex: 0 0 auto;
-  margin-left: -700px;
-  margin-right: -700px;
 }
 
 .home-page-web .pricing-card-3 {
@@ -2089,8 +2085,6 @@ home-page-web .frame-3 {
   position: relative;
   width: 31.3px;
   height: 24px;
-  margin-bottom: -687px;
-  margin-right: -6892.3px;
 }
 
 .home-page-web .text-wrapper-31 {
@@ -2742,6 +2736,15 @@ home-page-web .line-2 {
   gap: 2px;
   position: relative;
   flex: 0 0 auto;
+}
+
+.home-page-web .frame-28 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  align-self: stretch;
 }
 
 .home-page-web .frame-83 {
