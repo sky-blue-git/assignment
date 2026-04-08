@@ -57,12 +57,6 @@
   flex-grow: 1;
 }
 
-.home-page-web .screenshot {
-  position: relative;
-  width: 109px;
-  height: 45px;
-}
-
 .home-page-web .frame-2 {
   display: inline-flex;
   height: 44px;
@@ -2477,12 +2471,6 @@ home-page-web .frame-3 {
   position: relative;
 }
 
-.home-page-web .phone-call {
-  position: relative;
-  width: 20px;
-  height: 20px;
-}
-
 .home-page-web .noise-texture-9 {
   position: absolute;
   top: calc(50% - 265px);
@@ -2863,12 +2851,6 @@ home-page-web .line-2 {
   border: 1px solid;
   border-color: #cfd1d4;
   box-shadow: var(--shadows-s2);
-}
-
-.home-page-web .screenshot-2 {
-  position: relative;
-  width: 109px;
-  height: 40px;
 }
 
 .home-page-web .premium-HDPE-pipes-wrapper {
