@@ -409,6 +409,102 @@
   font-style: var(--heading-h1-font-style);
 }
 
+/* Hero H1: text-3xl → sm:text-4xl → lg:text-5xl; full Figma size from xl up (1280px+) */
+@media (max-width: 1279px) {
+  .home-page-web .premium-HDPE-pipes {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 1023px) {
+  .home-page-web .premium-HDPE-pipes {
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 639px) {
+  .home-page-web .premium-HDPE-pipes {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  /* Hero fold: stop horizontal bleed (badges row was ~450px fixed; section clipped text) */
+  .home-page-web .hero-fold {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .home-page-web .hero-fold .frame-4 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+  }
+
+  .home-page-web .hero-fold .frame-5,
+  .home-page-web .hero-fold .frame-9 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .home-page-web .hero-fold .frame-10,
+  .home-page-web .hero-fold .frame-11 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Cert badges: single column — 3×142px row overflowed viewport */
+  .home-page-web .hero-fold .frame-12 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .home-page-web .hero-fold .frame-13 {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 640px) {
+  .home-page-web .hero-fold {
+    padding: var(--section-pad-y) var(--section-pad-x);
+  }
+
+  .home-page-web .hero-fold .frame-12 {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: auto;
+    max-width: none;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .home-page-web .hero-fold .frame-13 {
+    flex: 0 0 auto;
+    width: 142px;
+    max-width: none;
+    min-width: auto;
+  }
+}
+
 .home-page-web .div-2 {
   display: flex;
   flex-direction: column;
