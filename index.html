@@ -397,8 +397,8 @@
           </p>
           <div class="frame-30">
             <div class="frame-11">
-              <div class="frame-31">
-                <div class="frame-32">
+              <div class="frame-31 faq-item">
+                <div class="frame-32 faq-question">
                   <p class="text-wrapper-17">
                     What is the purpose of a laser cutter for sheet metal?
                   </p>
@@ -412,54 +412,66 @@
                   essential in manufacturing processes.
                 </p>
               </div>
-              <div class="frame-33">
-                <div class="frame-32">
+              <div class="frame-33 faq-item">
+                <div class="frame-32 faq-question">
                   <div class="frame-34">
                     <p class="text-wrapper-17">
                       What are the benefits of using aluminum tubing in
                       manufacturing?
                     </p>
                   </div>
-                  <div class="frame-35">
+                  <div class="frame-35 chevron-container">
                     <img class="chevron-down" src="assets/chevron-down-2.svg" />
                   </div>
                 </div>
+                <p class="text-wrapper-18">
+                  Aluminum tubing offers an excellent strength-to-weight ratio, high corrosion resistance, and superior thermal conductivity. These properties make it ideal for aerospace, automotive, and HVAC applications where durability and weight reduction are critical.
+                </p>
               </div>
-              <div class="frame-33">
-                <div class="frame-32">
+              <div class="frame-33 faq-item">
+                <div class="frame-32 faq-question">
                   <div class="frame-34">
                     <p class="text-wrapper-17">
                       How is aluminum tubing produced?
                     </p>
                   </div>
-                  <div class="frame-35">
+                  <div class="frame-35 chevron-container">
                     <img class="chevron-down" src="assets/chevron-down-2.svg" />
                   </div>
                 </div>
+                <p class="text-wrapper-18">
+                  It is primarily produced through extrusion, where heated aluminum billets are forced through a die to create the desired profile. This process allows for complex shapes and high dimensional accuracy, followed by drawing or rolling for specific thickness requirements.
+                </p>
               </div>
-              <div class="frame-33">
-                <div class="frame-32">
+              <div class="frame-33 faq-item">
+                <div class="frame-32 faq-question">
                   <div class="frame-34">
                     <p class="text-wrapper-17">
                       What are the common applications of aluminum tubing?
                     </p>
                   </div>
-                  <div class="frame-35">
+                  <div class="frame-35 chevron-container">
                     <img class="chevron-down" src="assets/chevron-down-2.svg" />
                   </div>
                 </div>
+                <p class="text-wrapper-18">
+                  Beyond structural framing and heat exchangers, it is widely used in medical equipment, furniture, outdoor gear, and fluid transportation systems due to its versatility and ease of fabrication.
+                </p>
               </div>
-              <div class="frame-36">
-                <div class="frame-32">
+              <div class="frame-36 faq-item">
+                <div class="frame-32 faq-question">
                   <div class="frame-34">
                     <p class="text-wrapper-17">
                       Can aluminum tubing be customized?
                     </p>
                   </div>
-                  <div class="frame-35">
+                  <div class="frame-35 chevron-container">
                     <img class="chevron-down" src="assets/chevron-down-2.svg" />
                   </div>
                 </div>
+                <p class="text-wrapper-18">
+                  Yes, we offer extensive customization options including specific alloys, custom diameters, various wall thicknesses, and specialized finishes like anodizing or powder coating to meet unique engineering specifications.
+                </p>
               </div>
             </div>
           </div>
@@ -1214,6 +1226,28 @@
           viewport.scrollBy({ left: stepDistance(), behavior: "smooth" });
         });
       })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const faqItem = this.closest(".faq-item");
+            const isActive = faqItem.classList.contains("active");
+
+            // Close all other FAQ items
+            document.querySelectorAll(".faq-item").forEach((item) => {
+              item.classList.remove("active");
+            });
+
+            // Toggle the current one
+            if (!isActive) {
+              faqItem.classList.add("active");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
