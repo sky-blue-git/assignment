@@ -1227,26 +1227,147 @@
         });
       })();
     </script>
+    <div class="modal-overlay" id="download-modal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 class="modal-title">Let us email the entire catalogue to you</h3>
+          <button class="modal-close" id="modal-close">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11M1 11L11 1" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-form-container">
+          <form class="modal-form" id="download-form">
+            <div class="form-group">
+              <label class="form-label">Your Email *</label>
+              <input
+                type="email"
+                class="form-input"
+                placeholder="example@gmail.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Contact (Optional)</label>
+              <input
+                type="tel"
+                class="form-input"
+                placeholder="+91-0000000000"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" form="download-form" class="modal-submit">Download Brochure</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay" id="quote-modal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 class="modal-title">Request a call back</h3>
+          <button class="modal-close" id="quote-modal-close">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11M1 11L11 1" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-form-container">
+          <form class="modal-form" id="quote-form">
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Full Name" required />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Company Name" />
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <div class="phone-input-group">
+                <div class="phone-prefix">
+                  <span>+91</span>
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <input type="tel" class="form-input" placeholder="7003026616" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" form="quote-form" class="modal-submit active">Submit Form</button>
+        </div>
+      </div>
+    </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // FAQ logic
         const faqQuestions = document.querySelectorAll(".faq-question");
-
         faqQuestions.forEach((question) => {
           question.addEventListener("click", function () {
             const faqItem = this.closest(".faq-item");
             const isActive = faqItem.classList.contains("active");
-
-            // Close all other FAQ items
             document.querySelectorAll(".faq-item").forEach((item) => {
               item.classList.remove("active");
             });
-
-            // Toggle the current one
             if (!isActive) {
               faqItem.classList.add("active");
             }
           });
         });
+
+        // Download Modal logic
+        const downloadBtn = document.querySelector(".button-5");
+        const downloadModal = document.getElementById("download-modal");
+        const downloadCloseBtn = document.getElementById("modal-close");
+
+        if (downloadBtn && downloadModal && downloadCloseBtn) {
+          downloadBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            downloadModal.classList.add("visible");
+            document.body.style.overflow = "hidden";
+          });
+
+          downloadCloseBtn.addEventListener("click", function () {
+            downloadModal.classList.remove("visible");
+            document.body.style.overflow = "auto";
+          });
+
+          downloadModal.addEventListener("click", function (e) {
+            if (e.target === downloadModal) {
+              downloadModal.classList.remove("visible");
+              document.body.style.overflow = "auto";
+            }
+          });
+        }
+
+        // Quote Modal logic
+        const quoteBtn = document.querySelector(".button-6");
+        const quoteModal = document.getElementById("quote-modal");
+        const quoteCloseBtn = document.getElementById("quote-modal-close");
+
+        if (quoteBtn && quoteModal && quoteCloseBtn) {
+          quoteBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            quoteModal.classList.add("visible");
+            document.body.style.overflow = "hidden";
+          });
+
+          quoteCloseBtn.addEventListener("click", function () {
+            quoteModal.classList.remove("visible");
+            document.body.style.overflow = "auto";
+          });
+
+          quoteModal.addEventListener("click", function (e) {
+            if (e.target === quoteModal) {
+              quoteModal.classList.remove("visible");
+              document.body.style.overflow = "auto";
+            }
+          });
+        }
       });
     </script>
   </body>
