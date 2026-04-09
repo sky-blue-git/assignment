@@ -1117,8 +1117,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  padding: 20px;
+  gap: 0;
+  padding: 24px;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1142,6 +1142,7 @@
   width: 100%;
   position: relative;
   flex: 0 0 auto;
+  cursor: pointer;
 }
 
 .home-page-web .text-wrapper-17 {
@@ -1158,42 +1159,66 @@
   font-style: var(--body-body-16-med-font-style);
 }
 
-.home-page-web .chevron-down-wrapper {
-  display: inline-flex;
+.home-page-web .chevron-down-wrapper,
+.home-page-web .frame-35,
+.home-page-web .chevron-container {
+  display: flex;
   align-items: center;
-  gap: 3px;
-  padding: 3px;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
   position: relative;
   flex: 0 0 auto;
   background-color: var(--rose-50);
-  border-radius: 37.5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.home-page-web .frame-35,
+.home-page-web .chevron-container {
+  background-color: #f1f1f3;
 }
 
 .home-page-web .chevron-down {
   position: relative;
-  width: 18px;
-  height: 18px;
+  width: 10.5px;
+  height: 5.25px;
+  transition: transform 0.3s ease;
 }
 
 .home-page-web .text-wrapper-18 {
   position: relative;
-  width: fit-content;
+  width: 100%;
   font-family: var(--body-body-16-reg-font-family);
   font-weight: var(--body-body-16-reg-font-weight);
   color: #535a60;
   font-size: var(--body-body-16-reg-font-size);
   letter-spacing: var(--body-body-16-reg-letter-spacing);
   line-height: var(--body-body-16-reg-line-height);
-  white-space: nowrap;
   font-style: var(--body-body-16-reg-font-style);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition: all 0.3s ease;
+}
+
+.home-page-web .faq-item.active .text-wrapper-18 {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.home-page-web .faq-item.active .chevron-down {
+  transform: rotate(180deg);
 }
 
 .home-page-web .frame-33 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  padding: 20px;
+  gap: 0;
+  padding: 24px;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1232,8 +1257,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  padding: 20px;
+  gap: 0;
+  padding: 24px;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -3142,4 +3167,208 @@ home-page-web .line-2 {
   line-height: var(--body-body-12-reg-line-height);
   white-space: nowrap;
   font-style: var(--body-body-12-reg-font-style);
+}
+
+/* Modal Styles - Final Refinement with Dividers */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #ffffff;
+  width: 550px;
+  border-radius: 12px;
+  box-shadow: 0px 16px 40px -8px rgba(88, 92, 95, 0.16);
+  border: 1px solid #e5e7eb;
+  transform: translateY(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-overlay.visible .modal-box {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 56px; /* Exact height from Figma */
+  border-bottom: 1px solid #e1e3e8;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 56px;
+}
+
+.modal-title {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+  margin: 0;
+}
+
+.modal-close {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  width: 24px; /* Box for the cross */
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.modal-form-container {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 510px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.form-label {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #374151;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #e1e3e8;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #111827;
+  box-sizing: border-box;
+}
+
+.modal-footer {
+  width: 100%;
+  height: 56px; /* Exact height from Figma */
+  padding: 0 20px;
+  border-top: 1px solid #e1e3e8; /* Full-width line above button */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  flex: 0 0 56px;
+}
+
+.modal-submit {
+  width: 156px;
+  height: 34px;
+  padding: 0 12px;
+  background-color: rgba(43, 57, 144, 0.12);
+  color: #9ca3af;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-submit:hover {
+  background-color: #2b3990;
+  color: white;
+}
+
+/* Quote Modal Specific Styles */
+.phone-input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e1e3e8;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phone-prefix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: #ffffff;
+  border-right: 1px solid #e1e3e8;
+  height: 100%;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.phone-input-group .form-input {
+  border: none !important;
+  border-radius: 0 !important;
+  height: 100% !important;
+  flex: 1;
+}
+
+.phone-input-group .form-input:focus {
+  box-shadow: none !important;
+}
+
+.phone-input-group:focus-within {
+  border-color: #2b3990;
+  box-shadow: 0 0 0 3px rgba(43, 57, 144, 0.1);
+}
+
+.modal-submit.active {
+  background-color: #2b3990;
+  color: white;
+  width: 109px; /* Updated from requested dimension */
 }
