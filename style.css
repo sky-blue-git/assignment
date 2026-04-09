@@ -2112,6 +2112,10 @@
   flex: 0 0 auto;
 }
 
+.home-page-web .testimonial-section {
+  padding: 100px 0;
+}
+
 .home-page-web .noise-texture-7 {
   position: absolute;
   top: calc(50% - 394px);
@@ -2146,26 +2150,36 @@
 
 .home-page-web .frame-62 {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed to flex-start for scrolling */
   gap: 32px;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  padding: 10px 100px; /* Margin at the left of first card and right of last card */
+  box-sizing: border-box;
+}
+
+.home-page-web .frame-62::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
 }
 
 .home-page-web .frame-63 {
-  display: inline-flex;
+  display: flex; /* Changed from inline-flex to flex */
   align-items: flex-start;
   gap: 24px;
   position: relative;
   flex: 0 0 auto;
+  flex-wrap: nowrap; /* Ensure cards stay in one line */
 }
 
 .home-page-web .pricing-card-3 {
   width: 420px;
+  flex-shrink: 0; /* Prevent cards from shrinking */
   gap: 40px;
   padding: 32px;
   background-color: #f7f8f9;
@@ -2276,6 +2290,7 @@
 
 .home-page-web .pricing-card-4 {
   width: 420px;
+  flex-shrink: 0; /* Prevent cards from shrinking */
   justify-content: space-between;
   padding: 32px;
   align-self: stretch;
